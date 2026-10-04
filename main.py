@@ -7,7 +7,7 @@ import customtkinter as ctk
 
 def main():
     ctk.set_appearance_mode("dark")
-    ctk.set_default_color_theme("blue")
+    ctk.set_default_color_theme("green")
 
     app = ctk.CTk()
     app.geometry("400x300")
@@ -40,7 +40,7 @@ def main():
 
     status_label = ctk.CTkLabel(
         app,
-        text="",
+        text="status: ",
         font=("Arial", 15)
     )
     status_label.pack()
