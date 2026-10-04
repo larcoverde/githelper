@@ -12,7 +12,7 @@ def main():
     ctk.set_default_color_theme("blue")
 
     app = ctk.CTk()
-    app.geometry("800x600")
+    app.geometry("400x300")
     app.title("githelper")
 
     main_title_label = ctk.CTkLabel(
