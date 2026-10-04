@@ -3,8 +3,6 @@
 # MIT license
 #
 
-from pickletools import stackslice
-
 import customtkinter as ctk
 
 def main():
