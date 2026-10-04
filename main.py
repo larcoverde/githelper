@@ -4,8 +4,21 @@
 #
 
 import customtkinter as ctk
+import subprocess as sp
 
 def main():
+
+    def clone_repository():
+        git_url = git_url_entry.get()
+        dir = directory_entry.get()
+
+        sp.run([
+            "git",
+            "clone",
+            git_url,
+            dir
+        ])
+
     ctk.set_appearance_mode("dark")
     ctk.set_default_color_theme("green")
 
@@ -20,11 +33,11 @@ def main():
     )
     main_title_label.pack(pady=30)
 
-    git_repo_url_entry = ctk.CTkEntry(
+    git_url_entry = ctk.CTkEntry(
         app,
         placeholder_text="repository url"
     )
-    git_repo_url_entry.pack()
+    git_url_entry.pack()
 
     directory_entry = ctk.CTkEntry(
         app,
@@ -34,7 +47,8 @@ def main():
 
     clone_button = ctk.CTkButton(
         app,
-        text="clone"
+        text="clone",
+        command=clone_repository
     )
     clone_button.pack(pady=20)
 
